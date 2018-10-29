@@ -74,9 +74,6 @@
         ]
       },
     {{end}}
-    {{if IsOpenShift}}
-      {{template "openshift/infraresources.t" .}}
-    {{end}}
     {{ range $index, $element := .AgentPoolProfiles}}
       {{if $index}}, {{end}}
       {{if .IsWindows}}
